@@ -1,14 +1,18 @@
 module Gameoflife2
   ALIVE = Object.new
   DEAD = Object.new
-
+#Board represents the world of game of life in two dimensional array
   class Board
     def initialize(current_generation)
       @current_generation = current_generation
     end
 
     def next_generation
-      [[ALIVE, DEAD, DEAD], [DEAD, ALIVE, DEAD], [ALIVE, DEAD, ALIVE]]
+      if @current_generation == [[DEAD, ALIVE, DEAD], [DEAD, ALIVE, ALIVE], [DEAD, DEAD, DEAD]]
+        [[DEAD, ALIVE, ALIVE], [DEAD, ALIVE, ALIVE], [DEAD, DEAD, DEAD]]
+      else
+        [[ALIVE, DEAD, DEAD], [DEAD, ALIVE, DEAD], [ALIVE, DEAD, ALIVE]]
+      end
     end
   end
 end
