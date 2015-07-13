@@ -1,1 +1,1 @@
-require gameoflife2
+require 'gameoflife2'
