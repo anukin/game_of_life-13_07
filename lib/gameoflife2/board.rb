@@ -14,5 +14,9 @@ module Gameoflife2
         [[ALIVE, DEAD, DEAD], [DEAD, ALIVE, DEAD], [ALIVE, DEAD, ALIVE]]
       end
     end
+
+    def cell_at(x, y)
+      @current_generation[x][y]
+    end
   end
 end
